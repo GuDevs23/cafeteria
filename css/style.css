@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fefefe;
+  font-family: Helvetica;
+}
+
+.container {
+  /*container pai*/
+  width: 100%;
+  height: 100%;
+}
+
+#barra-navegacao {
+  /*cabeçalho com links*/
+  display: flex;
+  height: 120px;
+  width: 100%;
+  background-color: #593d2d;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+#logo-cafe,
+#acesso-rapido {
+  /*logos de acesso rapido, login, pesquisa e compras*/
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#logo-cafe img {
+  /*logo empresa*/
+  height: 90%;
+  width: 120px;
+}
+
+#nav-links ul {
+  /*links cabecalho* lista*/
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#nav-links li {
+  /*links cabecalho (escritas)*/
+  padding: 25px;
+  color: #fefefe;
+  text-shadow: 2px 2px 2px black;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#nav-links li:hover {
+  background-image: url(/img/graos-de-cafe.png);
+  background-size: 25%, 20%;
+  background-repeat: no-repeat;
+  
+}
+
+#acesso-rapido img {
+  /*imagens acesso rapido*/
+  height: 30px;
+  width: 30px;
+  padding: 35px;
+  cursor: pointer;
+}
+#video {
+  width: 100% !important;
+  height: 100%;
+  position: relative;
+}
+#principal {
+  /*container pai dos próximos conteudos*/
+  height: 100%;
+  display: block;
+  max-width: 2500px;
+}
+#Publicy {
+  /*container pai propaganda*/
+  width: 100% !important;
+  display: flex;
+  height: 700px;
+  padding-top: 5rem;
+}
+
+#Publicy img {
+  /*imagem maior à esquerda*/
+  width: 50%;
+  padding: 2.5px;
+  height: 100%;
+  border-radius: 35px;
+}
+.informe {
+  /*container pai dos paragrafos da propaganda*/
+  text-align: center;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.informe p {
+  /*paragrafos da propaganda*/
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+.informe h4 {
+  /*titulo da propaganda*/
+  font-size: 42px;
+  margin: 0 auto;
+}
+
+.bold-green {
+  /*titulo na cor verde*/
+  color: rgb(1, 91, 1);
+}
+.bold-yellow {
+  /*titulo na cor amarelo*/
+  color: rgb(165, 165, 5);
+}
+#cultivo-cafe,
+#preparo-cafe,
+#consumo-cafe {
+  /*imagens dos processos do cafe*/
+  width: 70%;
+  height: 100px;
+}
+
+.frase-cultivar,
+.preparo,
+.consumo {
+  /*divs dos processos do cafe*/
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#history {
+  /*historia da cafeteria*/
+  margin-top: 100px;
+  height: 480px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #593d2d;
+  align-items: center;
+}
+
+.texto-um {
+  /*titulo historia*/
+  font-size: 45px;
+  width: 45%;
+  color: #fefefe;
+  text-shadow: 2px 2px 2px black;
+}
+.texto-dois {
+  width: 45%;
+  font-size: 30px;
+}
+
+.Bold-coffe {
+  color: #fefefe;
+  text-shadow: 2px 2px 2px black;
+}
+
+#link-sobre-nos { /*button na parte inferior*/
+  text-decoration: none;
+  background-color: aliceblue;
+  width: 200px;
+  height: 80px;
+  border-radius: 15px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #26140e;
+  margin-left: 200px;
+}
+
+#link-sobre-nos:hover { /*efeitos do buttom*/
+  text-decoration: none;
+  opacity: 0.2;
+}
