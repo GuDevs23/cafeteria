@@ -58,7 +58,6 @@ body {
   background-image: url(/img/graos-de-cafe.png);
   background-size: 25%, 20%;
   background-repeat: no-repeat;
-  
 }
 
 #acesso-rapido img {
@@ -83,8 +82,8 @@ body {
   /*container pai propaganda*/
   width: 100% !important;
   display: flex;
-  height: 700px;
-  padding-top: 5rem;
+  height: 720px;
+  padding-top: 1.2rem;
 }
 
 #Publicy img {
@@ -97,21 +96,22 @@ body {
 .informe {
   /*container pai dos paragrafos da propaganda*/
   text-align: center;
-  font-size: 20px;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  margin-top: 15px;
 }
 .informe p {
   /*paragrafos da propaganda*/
   width: 80%;
+  font-size: 18px;
   align-items: center;
   justify-content: center;
   padding: 28px;
 }
 .informe h4 {
   /*titulo da propaganda*/
-  font-size: 42px;
+  font-size: 38px;
   margin: 0 auto;
 }
 
@@ -127,7 +127,7 @@ body {
 #preparo-cafe,
 #consumo-cafe {
   /*imagens dos processos do cafe*/
-  width: 70%;
+  width: 75%;
   height: 100px;
 }
 
@@ -144,7 +144,7 @@ body {
 
 #history {
   /*historia da cafeteria*/
-  margin-top: 100px;
+  margin-top: 10px;
   height: 480px;
   display: flex;
   justify-content: space-around;
@@ -169,7 +169,8 @@ body {
   text-shadow: 2px 2px 2px black;
 }
 
-#link-sobre-nos { /*button na parte inferior*/
+#link-sobre-nos {
+  /*button na parte inferior*/
   text-decoration: none;
   background-color: aliceblue;
   width: 200px;
@@ -182,7 +183,180 @@ body {
   margin-left: 200px;
 }
 
-#link-sobre-nos:hover { /*efeitos do buttom*/
+#link-sobre-nos:hover {
+  /*efeitos do buttom*/
   text-decoration: none;
   opacity: 0.2;
+}
+
+#cardapio {
+  height: 2650px;
+  display: grid;
+  width: 100%;
+  position: relative;
+}
+
+.bg-opacity {
+  background-image: url(/img/Papel-de-Parede-Adesivo-Graos-de-Cafe--N010057.jpg);
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.titulo-cardapio {
+  /*titulo do cardapio escrita do topo*/
+  position: absolute;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+.titulo-cardapio h3 {
+  /*titulo forte*/
+  font-size: 43px;
+  color: #593d2d;
+}
+.titulo-cardapio p {
+  /*subtitulo*/
+  font-size: 15px;
+  margin-left: 50px;
+}
+
+#ice-coffe {
+  /*frapuccino*/
+    align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 2%;
+  margin-top: 30vh;
+  background-image: url(/img/frapuccino.png);
+  background-size: 110vh;
+  width: 45%;
+  height: 90vh;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+.titulo-produto {
+  /*titulo de cada item do cardapio*/
+  font-size: 38px;
+  display: flex;
+  color: #fefefe;
+  font-weight: 700;
+  text-shadow: 3px 3px 3px #26140e;
+}
+
+#breakfast {
+  /*lanches - café da manha */
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 50%;
+  margin-top: 60px;
+  background-image: url(/img/pão.jpg);
+  background-size: 110vh;
+  width: 45%;
+  height: 90vh;
+  text-align: center;
+  text-decoration: none;
+}
+
+#salgados {
+  /*salgados*/
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  position: absolute;
+  left: 50%;
+  margin-top: 80vh;
+  background-image: url(/img/salgados.jpg);
+  background-size: 900px;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 70vh;
+  text-align: center;
+  text-decoration: none;
+}
+
+#doces {
+  /*doces*/
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  position: absolute;
+  left: 2%;
+  margin-top: 130vh;
+  background-image: url(/img/doces.jpg);
+  background-size: 150vh;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 90vh;
+  text-align: center;
+  text-decoration: none;
+}
+
+#cafe { /*cafe tradicional*/
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  position: absolute;
+  left: 50%;
+  margin-top: 160vh;
+  background-image: url(/img/capuccino.jpg);
+  background-size: 200vh;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 38%;
+  text-align: center;
+  text-decoration: none;
+}
+
+#frutas{ /*salada de frutas*/
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  position: absolute;
+  left: 2%;
+  margin-top: 224vh;
+  background-image: url(/img/salada-fruta.jpeg);
+  background-size: 140vh;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 20%;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+#sorvete{ /*sorvetes e sobremesa gelada*/
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  position: absolute;
+  left: 50%;
+  margin-top: 282vh;
+  background-image: url(/img/sorvete.jpg);
+  background-size: 140vh;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 20%;
+  text-align: center;
+  text-decoration: none;
 }
