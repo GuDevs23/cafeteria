@@ -1,9 +1,15 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  
+}
+
+body {
   box-sizing: border-box;
   background-color: #fefefe;
   font-family: Helvetica;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -189,11 +195,12 @@ body {
   opacity: 0.2;
 }
 
-#cardapio {
-  height: 2650px;
+#cardapio { /*div contendo imagens dos pratos*/
+  height: 2770px;
   display: grid;
   width: 100%;
   position: relative;
+  
 }
 
 .bg-opacity {
@@ -204,11 +211,13 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+display: block;
 }
 
 .titulo-cardapio {
   /*titulo do cardapio escrita do topo*/
   position: absolute;
+  margin-top: 30px;
   width: 40%;
   align-items: center;
   justify-content: center;
@@ -228,7 +237,7 @@ body {
 
 #ice-coffe {
   /*frapuccino*/
-    align-items: center;
+  align-items: center;
   justify-content: center;
   align-content: center;
   justify-items: center;
@@ -242,7 +251,6 @@ body {
   height: 90vh;
   text-align: center;
   text-decoration: none;
-  
 }
 
 .titulo-produto {
@@ -308,7 +316,8 @@ body {
   text-decoration: none;
 }
 
-#cafe { /*cafe tradicional*/
+#cafe {
+  /*cafe tradicional*/
   align-items: center;
   justify-content: center;
   align-content: center;
@@ -325,7 +334,8 @@ body {
   text-decoration: none;
 }
 
-#frutas{ /*salada de frutas*/
+#frutas {
+  /*salada de frutas*/
   align-items: center;
   justify-content: center;
   align-content: center;
@@ -342,8 +352,8 @@ body {
   text-decoration: none;
 }
 
-
-#sorvete{ /*sorvetes e sobremesa gelada*/
+#sorvete {
+  /*sorvetes e sobremesa gelada*/
   align-items: center;
   cursor: pointer;
   justify-content: center;
@@ -360,3 +370,194 @@ body {
   text-align: center;
   text-decoration: none;
 }
+
+#place {
+  /*section contendo as fotos e o texto*/
+  background-color: #733b27;
+  display: flex;
+}
+
+.title-place {
+  /* texto da area nossas instalações */
+  text-align: center;
+  color: #fefefe;
+  text-shadow: 2px 2px black;
+  width: 40%;
+  padding: 25px;
+  margin-top: 100px;
+}
+
+#subtitle {
+  /*subtitulo da area do texto*/
+  font-size: 18px;
+}
+
+.title-place h3 {
+  /*titulo*/
+  font-size: 25px;
+}
+.title-place p {
+  /*paragrafo da area place*/
+  font-size: 15px;
+  padding: 5px;
+  text-shadow: none;
+  text-shadow: 1px 1px black;
+}
+.texto-place { /*paragrafo maior*/
+  padding: 15px;
+  font-size: 1px;
+}
+
+.images-places { /*fotos da div sobre o ambiente*/
+  width: 50%;
+  padding: 30px;
+  gap: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#salao { 
+  width: 300px;
+  height: 200px;
+  background-image: url(/img/salao.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#salao p {
+  margin-top: 70px;
+  margin-left: 140px;
+  color: #fefefe;
+  text-shadow: 2px 2px black;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  font-size: 25px;
+}
+
+#salao:hover, /*atributo de opacidade ao passar o mouse e mostrar a legenda*/
+#space-kids:hover,
+#hall-entrada:hover,
+#kids-space:hover {
+  opacity: 0.5;
+}
+
+#salao p:hover,/*atributo de opacidade ao passar o mouse e mostrar a legenda*/
+#space-kids p:hover,
+#hall-entrada p:hover,
+#kids-space p:hover {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+#space-kids {
+  width: 300px;
+  height: 200px;
+  background-image: url(/img/angulo2.png);
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  position: relative;
+}
+
+#space-kids p {
+  margin-top: 80px;
+  margin-left: 160px;
+  color: #fefefe;
+  text-shadow: 2px 2px black;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  font-size: 25px;
+}
+#hall-entrada {
+  width: 300px;
+  height: 200px;
+  background-image: url(/img/Hall\ de\ entrada\ de\ u.png);
+  display: flex;
+  background-size: 220px;
+  background-repeat: round;
+  justify-content: center;
+  position: relative;
+}
+#hall-entrada p {
+  color: #fefefe;
+  text-shadow: 2px 2px black;
+  margin-top: 80px;
+  margin-left: 130px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  font-size: 25px;
+}
+#kids-space {
+  width: 300px;
+  height: 200px;
+  background-image: url(/img/kid-space.png);
+  display: flex;
+  background-size: 220px;
+  background-repeat: round;
+  justify-content: center;
+  position: relative;
+}
+#kids-space p {
+  color: #fefefe;
+  text-shadow: 2px 2px black;
+  margin-top: 80px;
+  margin-left: 150px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  font-size: 25px;
+}
+.carrossel {
+  width: auto;
+  height: auto;
+  display: block;
+  overflow: hidden; /* Esconde tudo que ultrapassar o container*/
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /*Adiciona sombra ao redor*/
+}
+.slides {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out; /*Cria a animação de deslize/ transform → propriedade animada/ 0.5s → duração (meio segundo)/ ease-in-out → suavização */
+}
+.slides img{
+  width: 100%;
+  padding: 25px 25px;
+  object-fit: contain; /*Faz a imagem caber dentro sem cortar*/
+  display: block;
+}
+
+.right,.left {
+  position: absolute;
+  transform: translateY(-50%); /*Centraliza perfeitamente verticalmente*/
+   transform: translateX(-50%);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease; /*Cria animação suave ao mudar cor*/
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.75); /*Deixa botão mais claro ao passar mouse*/
+}
+.esquerda {
+  left: 10px;
+}
+.direita {
+  right: 10px;
+}
+
