@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cafeteria Amanhecer dos sonhos</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="js/script.js" defer></script>
 
     <link
       rel="shortcut icon"
@@ -219,21 +220,77 @@
             </figure>
           </div>
         </section>
-        <div class="carrossel">
-          <div class="slides">
-            
-            <img src="img/casal.jpg" alt="Carrossel HTML CSS Imagem 1" />
-            <img src="img/degustacao.png" alt="Carrossel HTML CSS Imagem 2" />
-            <img src="img/familia brasileira.png" alt="Carrossel HTML CSS Imagem 3" />
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img
+              src="img/Papel-de-Parede-Adesivo-Graos-de-Cafe--N010057.jpg"
+              style="width: 100%; height: 650px"
+            />
+            <div class="avaliacao">
+              <h3>Juliano Da Silva Prado</h3>
+              <p>
+                Um ambiente excelênte, de muita qualidade com um atendimento
+                acolhedor, sempre me sinto em casa vindo aqui, cada experiência
+                é incrível.
+              </p>
+            </div>
+            <div class="text">Caption Text</div>
           </div>
-          <button class="esquerda">&#10094;</button>
-          <button class="direita">&#10095;</button>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img
+              src="img/Papel-de-Parede-Adesivo-Graos-de-Cafe--N010057.jpg"
+              style="width: 100%; height: 650px"
+            />
+            <div class="avaliacao">
+              <h3>Sibele Silveira Caterine</h3>
+              <p>
+                As sobremesas daqui são fabulosas! Já viajei diversos países e
+                aqui sempre é a cafeteria mais renomada, a combinação de sabor,
+                ambiente e acolhimento tornam a experiência única e completa.
+              </p>
+            </div>
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img
+              src="img/Papel-de-Parede-Adesivo-Graos-de-Cafe--N010057.jpg"
+              style="width: 100%; height: 650px"
+            />
+            <div class="avaliacao">
+              <h3>Roberto Galdino Motta</h3>
+              <p>
+                Sempre venho com a minha familia aqui, amamos cada experiência.
+                Recomendo que participem do café da manhã, o aroma do café pela
+                manhã unido ao sabor de massa fresca. É uma oportunidade única. 
+              </p>
+            </div>
+            <div class="text">Caption Three</div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </main>
     </div>
   </body>
 </html>
-    <script src="js/script.js"></script>
 
 <!---site referencia https://umcoffeeco.com.br/?srsltid=AfmBOooLcNNK1W8bvbT4face18NhAa9LVLiOfwlgk-CCTpof9iyEAFke-->
 <!--site 2 referencia https://www.darkcoffeebr.com/-->

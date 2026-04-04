@@ -1,20 +1,28 @@
-const slides = document.querySelector('.slides');
-const imagens = document.querySelectorAll('.slides img');
-const btnEsq = document.querySelector('.esquerda');
-const btnDir = document.querySelector('.direita');
+let slideIndex = 1;
+showSlides(slideIndex);
 
-let index = 0;
-
-function mostrarSlide() {
-  slides.style.transform = `translateX(${-index * 100}%)`;
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-btnDir.addEventListener('click', () => {
-  index = (index + 1) % imagens.length;
-  mostrarSlide();
-});
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-btnEsq.addEventListener('click', () => {
-  index = (index - 1 + imagens.length) % imagens.length;
-  mostrarSlide();
-});
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
