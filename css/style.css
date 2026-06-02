@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  
 }
 
 body {
@@ -195,12 +194,12 @@ body {
   opacity: 0.2;
 }
 
-#cardapio { /*div contendo imagens dos pratos*/
+#cardapio {
+  /*div contendo imagens dos pratos*/
   height: 2770px;
   display: grid;
   width: 100%;
   position: relative;
-  
 }
 
 .bg-opacity {
@@ -211,7 +210,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-display: block;
+  display: block;
 }
 
 .titulo-cardapio {
@@ -403,12 +402,14 @@ display: block;
   text-shadow: none;
   text-shadow: 1px 1px black;
 }
-.texto-place { /*paragrafo maior*/
+.texto-place {
+  /*paragrafo maior*/
   padding: 15px;
   font-size: 1px;
 }
 
-.images-places { /*fotos da div sobre o ambiente*/
+.images-places {
+  /*fotos da div sobre o ambiente*/
   width: 50%;
   padding: 30px;
   gap: 80px;
@@ -416,7 +417,7 @@ display: block;
   flex-wrap: wrap;
 }
 
-#salao { 
+#salao {
   width: 300px;
   height: 200px;
   background-image: url(/img/salao.png);
@@ -528,14 +529,14 @@ display: block;
 /* Hide the images by default */
 .mySlides {
   display: none;
-  
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -554,8 +555,9 @@ display: block;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -590,7 +592,8 @@ display: block;
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -601,11 +604,15 @@ display: block;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.avaliacao{
+.avaliacao {
   position: relative;
   bottom: 380px;
   left: 250px;
@@ -616,11 +623,98 @@ display: block;
   text-align: center;
 }
 
-.avaliacao h3{
+.avaliacao h3 {
   font-size: 25px;
   color: #733b27;
 }
-.avaliacao p{
+.avaliacao p {
   font-size: 18px;
   padding-top: 25px;
+}
+.title {
+  color: #733b27;
+  text-align: center;
+  text-shadow: 2px 2px #fefefe;
+}
+
+#History {
+  background-color: #ba9d8a;
+  width: auto;
+  height: 38vh;
+}
+.text-history {
+  text-align: center;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.text-history h1 {
+  color: #593d2d;
+  font-weight: 400;
+  text-shadow: 2px 2px #26140e;
+  font-size: 45px;
+  padding: 25px;
+}
+.text-history p {
+  font-size: 18px;
+  width: 50%;
+  margin-left: 420px;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+#historia {
+  background-color: #26140e;
+  color: #f2f2f2;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+.container-newlaster {
+background-color:#927869;
+  height: 450px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 25px;
+}
+.container-newlaster h2{
+  color: #f2f2f2;
+  text-shadow: 1px 1px #26140e;
+}
+#Dados-newlaster {
+  width: 30%;
+  height: auto;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+#Dados-newlaster h2{
+  color: #733b27;
+  text-shadow: 1px 1px black;
+  padding: 25px;
+}
+#Dados-newlaster span {
+  color: #26140e;
+  text-shadow: 1px 1px black;
+  font-size: 20px;
+  padding: 25px;
+  margin-top: 25px;
+}
+#Dados-newlaster input{
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  }
+.dados{
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
