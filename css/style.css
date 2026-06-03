@@ -1,172 +1,240 @@
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #fefefe;
+  color: #26140e;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#barra-navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  min-height: 96px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #593d2d;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+#logo-cafe,
+#acesso-rapido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo-cafe img {
+  width: clamp(72px, 12vw, 120px);
+  height: auto;
+}
+
+#nav-links {
+  flex: 1 1 360px;
+}
+
+#nav-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-body {
-  box-sizing: border-box;
-  background-color: #fefefe;
-  font-family: Helvetica;
-  width: 100%;
-  height: 100%;
-}
-
-.container {
-  /*container pai*/
-  width: 100%;
-  height: 100%;
-}
-
-#barra-navegacao {
-  /*cabeçalho com links*/
-  display: flex;
-  height: 120px;
-  width: 100%;
-  background-color: #593d2d;
-  justify-content: space-between;
-  position: relative;
-  z-index: 10;
-}
-#logo-cafe,
-#acesso-rapido {
-  /*logos de acesso rapido, login, pesquisa e compras*/
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-#logo-cafe img {
-  /*logo empresa*/
-  height: 90%;
-  width: 120px;
-}
-
-#nav-links ul {
-  /*links cabecalho* lista*/
-  display: flex;
-  text-decoration: none;
-  list-style: none;
-  padding: 15px;
-  font-size: 20px;
-  text-align: center;
-}
-
 #nav-links li {
-  /*links cabecalho (escritas)*/
-  padding: 25px;
   color: #fefefe;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 1px 1px 2px black;
   font-weight: 600;
   cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 #nav-links li:hover {
-  background-image: url(/img/graos-de-cafe.png);
-  background-size: 25%, 20%;
+  background-image: url(img/graos-de-cafe.png);
+  background-size: 18px 18px;
   background-repeat: no-repeat;
+  background-position: left 0.6rem center;
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+#nav-links li:first-child {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+#acesso-rapido {
+  gap: 0.35rem;
+  flex-wrap: wrap;
 }
 
 #acesso-rapido img {
-  /*imagens acesso rapido*/
-  height: 30px;
-  width: 30px;
-  padding: 35px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
-}
-#video {
-  width: 100% !important;
-  height: 100%;
-  position: relative;
-}
-#principal {
-  /*container pai dos próximos conteudos*/
-  height: 100%;
-  display: block;
-  max-width: 2500px;
-}
-#Publicy {
-  /*container pai propaganda*/
-  width: 100% !important;
-  display: flex;
-  height: 720px;
-  padding-top: 1.2rem;
+  padding: 0;
+  object-fit: contain;
 }
 
-#Publicy img {
-  /*imagem maior à esquerda*/
-  width: 50%;
-  padding: 2.5px;
-  height: 100%;
-  border-radius: 35px;
+#video {
+  width: 100%;
+  background: #26140e;
 }
-.informe {
-  /*container pai dos paragrafos da propaganda*/
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  margin-top: 15px;
+
+#video video {
+  width: 100%;
+  height: min(72vh, 720px);
+  object-fit: cover;
 }
-.informe p {
-  /*paragrafos da propaganda*/
-  width: 80%;
-  font-size: 18px;
-  align-items: center;
-  justify-content: center;
-  padding: 28px;
-}
-.informe h4 {
-  /*titulo da propaganda*/
-  font-size: 38px;
+
+#principal {
+  width: 100%;
+  max-width: 2500px;
   margin: 0 auto;
 }
 
+#Publicy {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.1fr);
+  gap: 1rem;
+  padding: 1.25rem;
+  align-items: stretch;
+}
+
+#Publicy > img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.informe {
+  text-align: center;
+  padding: clamp(0.5rem, 2vw, 1.25rem);
+}
+
+.informe h4 {
+  font-size: clamp(1.8rem, 3vw, 2.9rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.informe p {
+  width: 100%;
+  max-width: 58rem;
+  margin: 0 auto;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  padding: 0.9rem 0;
+}
+
 .bold-green {
-  /*titulo na cor verde*/
   color: rgb(1, 91, 1);
 }
+
 .bold-yellow {
-  /*titulo na cor amarelo*/
   color: rgb(165, 165, 5);
-}
-#cultivo-cafe,
-#preparo-cafe,
-#consumo-cafe {
-  /*imagens dos processos do cafe*/
-  width: 75%;
-  height: 100px;
 }
 
 .frase-cultivar,
 .preparo,
 .consumo {
-  /*divs dos processos do cafe*/
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   width: 100%;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: left;
+  margin-top: 0.75rem;
+}
+
+.frase-cultivar p,
+.preparo p,
+.consumo p {
+  flex: 1 1 260px;
+  margin: 0;
+}
+
+#cultivo-cafe,
+#preparo-cafe,
+#consumo-cafe {
+  flex: 1 1 180px;
+  width: 100%;
+  max-width: 280px;
+  margin: 0;
+}
+
+#cultivo-cafe img,
+#preparo-cafe img,
+#consumo-cafe img {
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  object-fit: cover;
+  border-radius: 18px;
 }
 
 #history {
-  /*historia da cafeteria*/
-  margin-top: 10px;
-  height: 480px;
-  display: flex;
-  justify-content: space-around;
+  margin-top: 1rem;
+  min-height: 360px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
   background-color: #593d2d;
   align-items: center;
+  padding: 2rem 1.25rem;
 }
 
 .texto-um {
-  /*titulo historia*/
-  font-size: 45px;
-  width: 45%;
+  font-size: clamp(1.8rem, 3vw, 3rem);
   color: #fefefe;
   text-shadow: 2px 2px 2px black;
 }
+
+.texto-um h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
 .texto-dois {
-  width: 45%;
-  font-size: 30px;
+  width: 100%;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  color: #fefefe;
 }
 
 .Bold-coffe {
@@ -175,395 +243,309 @@ body {
 }
 
 #link-sobre-nos {
-  /*button na parte inferior*/
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   background-color: aliceblue;
-  width: 200px;
-  height: 80px;
-  border-radius: 15px;
-  font-size: 20px;
-  text-align: center;
-  padding: 10px;
+  min-width: 200px;
+  min-height: 52px;
+  border-radius: 14px;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
   color: #26140e;
-  margin-left: 200px;
+  margin-top: 1rem;
 }
 
 #link-sobre-nos:hover {
-  /*efeitos do buttom*/
-  text-decoration: none;
-  opacity: 0.2;
+  opacity: 0.85;
 }
 
 #cardapio {
-  /*div contendo imagens dos pratos*/
-  height: 2770px;
-  display: grid;
-  width: 100%;
   position: relative;
+  width: 100%;
+  padding: 4.5rem 1.25rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  overflow: hidden;
+  min-height: auto;
 }
 
 .bg-opacity {
-  background-image: url(/img/Papel-de-Parede-Adesivo-Graos-de-Cafe--N010057.jpg);
+  position: absolute;
+  inset: 0;
+  background-image: url(img/Papel-de-Parede-Adesivo-Graos-de-Cafe--N010057.jpg);
+  background-size: cover;
+  background-position: center;
   opacity: 0.1;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  display: block;
+  pointer-events: none;
 }
 
 .titulo-cardapio {
-  /*titulo do cardapio escrita do topo*/
-  position: absolute;
-  margin-top: 30px;
-  width: 40%;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-}
-.titulo-cardapio h3 {
-  /*titulo forte*/
-  font-size: 43px;
-  color: #593d2d;
-}
-.titulo-cardapio p {
-  /*subtitulo*/
-  font-size: 15px;
-  margin-left: 50px;
+  grid-column: 1 / -1;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 0.5rem;
+  padding: 0 0.5rem;
 }
 
-#ice-coffe {
-  /*frapuccino*/
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  position: absolute;
-  background-repeat: no-repeat;
-  left: 2%;
-  margin-top: 30vh;
-  background-image: url(/img/frapuccino.png);
-  background-size: 110vh;
-  width: 45%;
-  height: 90vh;
-  text-align: center;
+.titulo-cardapio h3 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  color: #593d2d;
+  margin: 0 0 0.5rem;
+}
+
+.titulo-cardapio p {
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  margin: 0;
+}
+
+#cardapio > a {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: clamp(180px, 28vw, 320px);
+  border-radius: 22px;
+  overflow: hidden;
   text-decoration: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 10px 24px rgba(38, 20, 14, 0.12);
+}
+
+#cardapio > a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
 }
 
 .titulo-produto {
-  /*titulo de cada item do cardapio*/
-  font-size: 38px;
-  display: flex;
+  position: relative;
+  z-index: 2;
+  align-self: flex-end;
+  padding: 1rem;
+  font-size: clamp(1.25rem, 2.4vw, 2.1rem);
   color: #fefefe;
   font-weight: 700;
-  text-shadow: 3px 3px 3px #26140e;
+  text-shadow: 2px 2px 3px #26140e;
+}
+
+#ice-coffe {
+  background-image: url(/img/frapuccino.png);
 }
 
 #breakfast {
-  /*lanches - café da manha */
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  position: absolute;
-  background-repeat: no-repeat;
-  left: 50%;
-  margin-top: 60px;
   background-image: url(/img/pão.jpg);
-  background-size: 110vh;
-  width: 45%;
-  height: 90vh;
-  text-align: center;
-  text-decoration: none;
 }
 
 #salgados {
-  /*salgados*/
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  position: absolute;
-  left: 50%;
-  margin-top: 80vh;
   background-image: url(/img/salgados.jpg);
-  background-size: 900px;
-  background-repeat: no-repeat;
-  width: 45%;
-  height: 70vh;
-  text-align: center;
-  text-decoration: none;
 }
 
 #doces {
-  /*doces*/
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  position: absolute;
-  left: 2%;
-  margin-top: 130vh;
   background-image: url(/img/doces.jpg);
-  background-size: 150vh;
-  background-repeat: no-repeat;
-  width: 45%;
-  height: 90vh;
-  text-align: center;
-  text-decoration: none;
 }
 
 #cafe {
-  /*cafe tradicional*/
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  position: absolute;
-  left: 50%;
-  margin-top: 160vh;
   background-image: url(/img/capuccino.jpg);
-  background-size: 200vh;
-  background-repeat: no-repeat;
-  width: 45%;
-  height: 38%;
-  text-align: center;
-  text-decoration: none;
 }
 
 #frutas {
-  /*salada de frutas*/
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  position: absolute;
-  left: 2%;
-  margin-top: 224vh;
   background-image: url(/img/salada-fruta.jpeg);
-  background-size: 140vh;
-  background-repeat: no-repeat;
-  width: 45%;
-  height: 20%;
-  text-align: center;
-  text-decoration: none;
 }
 
 #sorvete {
-  /*sorvetes e sobremesa gelada*/
-  align-items: center;
-  cursor: pointer;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  position: absolute;
-  left: 50%;
-  margin-top: 282vh;
   background-image: url(/img/sorvete.jpg);
-  background-size: 140vh;
-  background-repeat: no-repeat;
-  width: 45%;
-  height: 20%;
-  text-align: center;
-  text-decoration: none;
+}
+
+#sucos{
+    background-image: url(/img/vitamina.png);
+  
 }
 
 #place {
-  /*section contendo as fotos e o texto*/
   background-color: #733b27;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
+  gap: 1.5rem;
+  align-items: start;
+  padding: 2rem 1.25rem;
 }
 
 .title-place {
-  /* texto da area nossas instalações */
   text-align: center;
   color: #fefefe;
   text-shadow: 2px 2px black;
-  width: 40%;
-  padding: 25px;
-  margin-top: 100px;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0;
 }
 
 #subtitle {
-  /*subtitulo da area do texto*/
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .title-place h3 {
-  /*titulo*/
-  font-size: 25px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin: 0 0 0.35rem;
 }
+
 .title-place p {
-  /*paragrafo da area place*/
-  font-size: 15px;
-  padding: 5px;
-  text-shadow: none;
+  font-size: 1rem;
+  padding: 0.25rem 0;
   text-shadow: 1px 1px black;
 }
+
 .texto-place {
-  /*paragrafo maior*/
-  padding: 15px;
-  font-size: 1px;
+  padding: 1rem 0 0;
+  font-size: 1rem;
 }
 
 .images-places {
-  /*fotos da div sobre o ambiente*/
-  width: 50%;
-  padding: 30px;
-  gap: 80px;
+  width: 100%;
+  padding: 0;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#salao,
+#space-kids,
+#hall-entrada,
+#kids-space {
+  width: 100%;
+  min-height: 190px;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
 }
 
 #salao {
-  width: 300px;
-  height: 200px;
   background-image: url(/img/salao.png);
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-#salao p {
-  margin-top: 70px;
-  margin-left: 140px;
-  color: #fefefe;
-  text-shadow: 2px 2px black;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  font-size: 25px;
-}
-
-#salao:hover, /*atributo de opacidade ao passar o mouse e mostrar a legenda*/
-#space-kids:hover,
-#hall-entrada:hover,
-#kids-space:hover {
-  opacity: 0.5;
-}
-
-#salao p:hover,/*atributo de opacidade ao passar o mouse e mostrar a legenda*/
-#space-kids p:hover,
-#hall-entrada p:hover,
-#kids-space p:hover {
-  opacity: 1;
-  width: 100%;
-  height: 100%;
 }
 
 #space-kids {
-  width: 300px;
-  height: 200px;
   background-image: url(/img/angulo2.png);
-  display: flex;
-  background-size: cover;
-  justify-content: center;
-  position: relative;
 }
 
-#space-kids p {
-  margin-top: 80px;
-  margin-left: 160px;
-  color: #fefefe;
-  text-shadow: 2px 2px black;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  font-size: 25px;
-}
 #hall-entrada {
-  width: 300px;
-  height: 200px;
   background-image: url(/img/Hall\ de\ entrada\ de\ u.png);
-  display: flex;
-  background-size: 220px;
-  background-repeat: round;
-  justify-content: center;
-  position: relative;
 }
-#hall-entrada p {
-  color: #fefefe;
-  text-shadow: 2px 2px black;
-  margin-top: 80px;
-  margin-left: 130px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  font-size: 25px;
-}
+
 #kids-space {
-  width: 300px;
-  height: 200px;
   background-image: url(/img/kid-space.png);
-  display: flex;
-  background-size: 220px;
-  background-repeat: round;
-  justify-content: center;
-  position: relative;
 }
+
+#salao p,
+#space-kids p,
+#hall-entrada p,
 #kids-space p {
+  margin: 0;
   color: #fefefe;
   text-shadow: 2px 2px black;
-  margin-top: 80px;
-  margin-left: 150px;
   width: 100%;
   height: 100%;
   opacity: 0;
   position: absolute;
-  font-size: 25px;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  transition: opacity 0.2s ease;
+  padding: 1rem;
+  text-align: center;
+}
+
+#salao:hover,
+#space-kids:hover,
+#hall-entrada:hover,
+#kids-space:hover {
+  opacity: 0.85;
+}
+
+#salao:hover p,
+#space-kids:hover p,
+#hall-entrada:hover p,
+#kids-space:hover p {
+  opacity: 1;
 }
 
 .slideshow-container {
   max-width: 1000px;
   position: relative;
-  margin: auto;
-  margin-top: 150px;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
 }
 
-/* Hide the images by default */
+.title {
+  color: #733b27;
+  text-align: center;
+  text-shadow: 2px 2px #fefefe;
+  margin-bottom: 1rem;
+}
+
 .mySlides {
   display: none;
+  position: relative;
 }
 
-/* Next & previous buttons */
+.mySlides img,
+.slide-image {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 45%;
+  top: 50%;
+  transform: translateY(-50%);
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  margin-top: 0;
+  padding: 14px 16px;
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  transition: 0.3s ease;
+  border-radius: 999px;
   user-select: none;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
-/* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+  right: 1.5rem;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+.prev {
+  left: 1.5rem;
+}
+
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 0.95rem;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -571,25 +553,23 @@ body {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 0.8rem;
   padding: 8px 12px;
   position: absolute;
   top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  height: 12px;
+  width: 12px;
+  margin: 0 3px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.3s ease;
 }
 
 .active,
@@ -597,15 +577,14 @@ body {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1.2s;
 }
 
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.45;
   }
   to {
     opacity: 1;
@@ -613,108 +592,368 @@ body {
 }
 
 .avaliacao {
-  position: relative;
-  bottom: 380px;
-  left: 250px;
-  width: 450px;
-  height: 140px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: 25vh;
+  transform: translateX(-50%);
+  width: min(90%, 520px);
+  background-color: rgba(242, 242, 242, 0.96);
+  border-radius: 16px;
   text-align: center;
+  padding: 1rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 .avaliacao h3 {
-  font-size: 25px;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
   color: #733b27;
+  margin: 0 0 0.5rem;
 }
+
 .avaliacao p {
-  font-size: 18px;
-  padding-top: 25px;
-}
-.title {
-  color: #733b27;
-  text-align: center;
-  text-shadow: 2px 2px #fefefe;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  margin: 0;
 }
 
 #History {
   background-color: #ba9d8a;
-  width: auto;
-  height: 38vh;
+  width: 100%;
+  min-height: 280px;
+  padding: 2rem 1.25rem;
+  display: grid;
+  place-items: center;
 }
+
 .text-history {
   text-align: center;
-  display: block;
-  align-items: center;
-  justify-content: center;
+  width: min(100%, 980px);
 }
+
 .text-history h1 {
   color: #593d2d;
   font-weight: 400;
   text-shadow: 2px 2px #26140e;
-  font-size: 45px;
-  padding: 25px;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  padding: 0 0 1rem;
+  margin: 0;
 }
+
 .text-history p {
-  font-size: 18px;
-  width: 50%;
-  margin-left: 420px;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 0 1rem;
 }
+
 #historia {
   background-color: #26140e;
   color: #f2f2f2;
-  font-size: 18px;
+  font-size: 1rem;
   border-radius: 10px;
   cursor: pointer;
-  padding: 10px;
+  padding: 0.75rem 1rem;
+  border: 0;
 }
+
+#Newlaster {
+  width: 100%;
+}
+
 .container-newlaster {
-background-color:#927869;
-  height: 450px;
+  background-color: #927869;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 25px;
-}
-.container-newlaster h2{
-  color: #f2f2f2;
-  text-shadow: 1px 1px #26140e;
-}
-#Dados-newlaster {
-  width: 30%;
-  height: auto;
-  background-color: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 25px;
-  margin-top: 50px;
+  padding: 2rem 1.25rem;
 }
-#Dados-newlaster h2{
+
+.container-newlaster > h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #f2f2f2;
+  text-shadow: 1px 1px #26140e;
+  text-align: center;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+}
+
+#Dados-newlaster,
+#agradecimentos {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  border-radius: 18px;
+  padding: 1.25rem;
+}
+
+#Dados-newlaster {
+  display: grid;
+  gap: 0.9rem;
+  justify-items: stretch;
+}
+
+#Dados-newlaster h2 {
   color: #733b27;
   text-shadow: 1px 1px black;
-  padding: 25px;
+  padding: 0;
+  margin: 0 0 0.5rem;
+  text-align: center;
 }
+
 #Dados-newlaster span {
   color: #26140e;
   text-shadow: 1px 1px black;
-  font-size: 20px;
-  padding: 25px;
-  margin-top: 25px;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
 }
-#Dados-newlaster input{
+
+.dados {
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+#Dados-newlaster input {
   width: 100%;
-  height: 25px;
-  border-radius: 5px;
-  }
-.dados{
-  padding: 20px;
-  align-items: center;
-  justify-content: center;
+  min-height: 44px;
+  border-radius: 8px;
+  border: 1px solid #b9b9b9;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+}
+
+#enviar {
+  background-color: #26140e;
+  color: #f2f2f2;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.85rem 1rem;
+  border: 0;
+}
+
+#agradecimentos {
   text-align: center;
+  display: none;
+  align-self: center;
+}
+
+.footer-container {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+#logo-footer {
+  height: auto;
+  width: clamp(90px, 12vw, 150px);
+  padding: 0;
+  margin-left: 0;
+}
+
+.link-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.9rem 1.5rem;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.link-footer a {
+  text-decoration: none;
+  color: #26140e;
+  text-shadow: 0.5px 0.5px black;
+}
+
+.link-footer a:hover {
+  color: #733b27;
+}
+
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0;
+  justify-content: center;
+}
+
+.social-media img {
+  height: 35px;
+  width: 35px;
+  padding: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  #Publicy,
+  #history,
+  #place,
+  .container-newlaster {
+    grid-template-columns: 1fr;
+  }
+
+  #Publicy > img {
+    min-height: 280px;
+  }
+
+  #history {
+    text-align: center;
+  }
+
+  #place {
+    gap: 1rem;
+  }
+
+  .title-place {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .images-places {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  #barra-navegacao {
+    justify-content: center;
+    padding: 0.75rem;
+  }
+
+  #nav-links {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  #nav-links ul {
+    gap: 0.4rem;
+  }
+
+  #nav-links li {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  #acesso-rapido img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #video video {
+    height: min(50vh, 520px);
+  }
+
+  #cardapio {
+    grid-template-columns: 1fr;
+    padding-top: 4rem;
+  }
+
+  .images-places {
+    grid-template-columns: 1fr;
+  }
+
+  .prev {
+    left: 0.75rem;
+  }
+
+  .next {
+    right: 0.75rem;
+  }
+
+  .avaliacao {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #barra-navegacao {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #nav-links ul {
+    flex-direction: column;
+  }
+
+  #nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  #video video {
+    height: min(34vh, 360px);
+  }
+
+  #Publicy,
+  #history,
+  #place,
+  .container-newlaster,
+  #History {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .frase-cultivar,
+  .preparo,
+  .consumo {
+    text-align: center;
+  }
+
+  #cardapio > a {
+    min-height: 220px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 15px;
+  }
+
+  #barra-navegacao {
+    min-height: auto;
+  }
+
+  #logo-cafe img {
+    width: 78px;
+  }
+
+  .informe h4 {
+    font-size: 1.45rem;
+  }
+
+  .texto-um h3,
+  .text-history h1,
+  .titulo-cardapio h3 {
+    word-break: break-word;
+  }
+
+  #cardapio {
+    gap: 0.85rem;
+  }
+
+  #salao,
+  #space-kids,
+  #hall-entrada,
+  #kids-space {
+    min-height: 160px;
+  }
 }

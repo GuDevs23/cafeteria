@@ -177,6 +177,11 @@
             <!--div contendo background image e a esrita-->
             <span class="titulo-produto">Sobremesas geladas</span>
           </a>
+          <a id="sucos" href="#"
+            ><!--Sorvetes e sobremesas geladas-->
+            <!--div contendo background image e a esrita-->
+            <span class="titulo-produto">Sucos</span>
+          </a>
         </section>
 
         <section id="place">
@@ -308,31 +313,55 @@
           </div>
         </section>
         <section id="Newlaster">
-          <div class="container-newlaster">
+          <div class="container-newlaster" >
                <h2>Informe seus dados para ter acesso ao Newlaster </h2>
             <form action="#" id="Dados-newlaster">
               <h2>Digite seus dados:</h2>
               <div class="dados">
                 <label for="nome"><span>Nome:</span></label>
-                <input type="text" name="nome" id="" nome />
+                <input type="text" name="nome" id="nome"  />
               </div>
               <div class="dados">
-                <label for="email"><span>E-mail:</span></label>
-                <input type="email" name="email" id="email" />
+                <label for="ctt"><span>E-mail:</span></label>
+                <input type="email" id="ctt" />
               </div>
               <div class="dados">
-              <label for="Whatsapp"><span>Whatsapp:</span></label>
-              <input type="tel" name="Whatsapp" id="Whatsapp" placeholder="(xx)9xxxx-xxxx" />
+              <label for="whatsapp"><span>Whatsapp:</span></label>
+              <input type="number" name="Whatsapp" id="whatsapp" placeholder="(xx)9xxxx-xxxx" maxlength="11"/>
               </div>
+              <button type="submit" id="enviar" onclick="processaDados()" >Enviar informações</button>
             </form>
+            <div id="agradecimentos">
+            <h1>Obrigado pelo envio!</h1>
           </div>
+          </div>
+          
         </section>
       </main>
+      <footer>
+        <div class="footer-container">
+          <img src="img/logo-cafe.png" alt="logo-cafeteria" id="logo-footer">
+          <div class="link-footer">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Conheça</a></li>
+              <li><a href="#">Nossos sabores</a></li>
+              <li><a href="#">Carápio</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+          <div class="social-media">
+            <a href="#"><img src="img/instagram.png" alt="Intagram" id="instagram"></a>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/whatsapp.png" alt="Whatsapp"></a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
 
 <!---site referencia https://umcoffeeco.com.br/?srsltid=AfmBOooLcNNK1W8bvbT4face18NhAa9LVLiOfwlgk-CCTpof9iyEAFke-->
 <!--site 2 referencia https://www.darkcoffeebr.com/-->
-<!--www.vanillacaffe.com.br/-->
+<!--https://www.vanillacaffe.com.br/-->
 <!--https://wecoffee.com.br/-->
