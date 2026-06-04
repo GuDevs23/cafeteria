@@ -1,11 +1,11 @@
 function processaDados() {
-  var nome = document.getElementById("nome");
+  var senha = document.getElementById("pass");
   var email = document.getElementById("ctt");
   var validacao = 1;
   event.preventDefault();
 
-  if (nome.value == "") {
-    alert("O campo nome deve não pode ser nulo!");
+  if (senha.value == "") {
+    alert("O campo senha deve não pode ser nulo!");
     nome.style.backgroundColor = "red";
     e.preventDefault();
     validacao = 0;
@@ -21,10 +21,12 @@ function processaDados() {
   }
 
   function validaDado(e) {
-    var formulario = document.getElementById("Dados-newlaster");
+    var formulario = document.getElementById("Dados-login");
     var thanks = document.getElementById("agradecimentos");
     formulario.style.display = "none";
     thanks.style.display = "block";
+thanks.style.marginBottom = "250px";
+   
   }
 }
 

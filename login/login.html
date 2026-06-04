@@ -6,7 +6,7 @@
     <title>Cafeteria Amanhecer dos sonhos</title>
     <link rel="stylesheet" href="/login/login css/login.css" />
     <script src="/login/script-login/login.js" defer></script>
-      <link
+    <link
       rel="shortcut icon"
       href="../img/graos-de-cafe.png"
       type="image/x-icon"
@@ -15,14 +15,14 @@
   <body>
     <div class="container">
       <!--navegação (parte superior)-->
-      <header id="barra-navegacao" ondblclick="fechaAbas()" >
+      <header id="barra-navegacao" ondblclick="fechaAbas()">
         <figure id="logo-cafe">
           <img src="../img/logo-cafe.png" alt="logo café" />
         </figure>
         <!--Links -->
         <nav id="nav-links">
           <ul>
-            <li>Home</li>
+            <a href="/index.html"><li>Home</li></a>
             <!--utilizar javascript nas linhas que vão funcionar como abas-->
             <li>Sobre nós</li>
             <li>Nossa estrutura</li>
@@ -32,20 +32,80 @@
         <!--icones de acesso rápido-->
         <div class="fast-acess">
           <figure id="acesso-rapido">
-            <button class="btn-fast-acess" id="pesquisar"><img src="../img/lupa.png" alt="Pesquisar" /></button>
-             <div class="opcoes-acesso">
-            <button class="btn-fast-acess" id="login-acesso" onclick="opcoesAcesso()" ondblclick="fechaAcesso()" ><img src="../img/user.png" alt="login" /></button>
+            <button class="btn-fast-acess" id="pesquisar">
+              <img src="../img/lupa.png" alt="Pesquisar" />
+            </button>
+            <div class="opcoes-acesso">
+              <button
+                class="btn-fast-acess"
+                id="login-acesso"
+                onclick="opcoesAcesso()"
+                ondblclick="fechaAcesso()"
+              >
+                <img src="../img/user.png" alt="login" />
+              </button>
               <ul id="list-acess">
                 <a href="login.html"><li>Login</li></a>
                 <a href="cadastro.html"><li>Cadastro</li></a>
                 <a href=""><li>Alterar dados</li></a>
               </ul>
             </div>
-            <button class="btn-fast-acess" id="compras"><img src="../img/carrinhos.png" alt="meu carrinho" /></button>
+            <button class="btn-fast-acess" id="compras">
+              <img src="../img/carrinhos.png" alt="meu carrinho" />
+            </button>
           </figure>
         </div>
       </header>
-
+      <main>
+        <div class="container-principal">
+          <section id="logon">
+            <div class="container-login">
+              <h2>Preencha seus dados para ingressar ao sistema de pedidos</h2>
+              <form action="#" id="Dados-login">
+                <h2>Digite seus dados cadastrados:</h2>
+                <div class="dados">
+                  <label for="ctt"><span>E-mail:</span></label>
+                  <input type="email" id="ctt" placeholder="Digite seu e-mail"/>
+                </div>
+                <div class="dados">
+                  <label for="senha"><span>Senha:</span></label>
+                  <input
+                    type="password"
+                    id="pass"
+                    placeholder="Digite sua senha"
+                  />
+                </div>
+                <button type="submit" id="enviar" onclick="processaDados()">
+                  Enviar informações
+                </button>
+                <a href="#">Esqueci a senha</a>
+              </form>
+              <div id="agradecimentos">
+                <h1>Obrigado pelo envio!</h1>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+        <footer>
+        <div class="footer-container">
+          <img src="../img/logo-cafe.png" alt="logo-cafeteria" id="logo-footer">
+          <div class="link-footer">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Conheça</a></li>
+              <li><a href="#">Nossos sabores</a></li>
+              <li><a href="#">Carápio</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+          <div class="social-media">
+            <a href="#"><img src="../img/instagram-white.png" alt="Intagram" id="instagram"></a>
+            <a href="#"><img src="../img/facebook-white.png" alt="Facebook"></a>
+            <a href="#"><img src="../img/whatsapp-white.png" alt="Whatsapp"></a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
