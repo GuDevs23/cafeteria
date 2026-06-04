@@ -1,11 +1,12 @@
 *,
-*::before,
+*::before, /*pseudo-elemento no CSS que permite inserir conteúdo visual na página antes do conteúdo real de um elemento HTML*/
 *::after {
+  /*pseudo-elemento no CSS que permite inserir conteúdo visual na página depois do conteúdo real de um elemento HTML*/
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /*é uma propriedade do CSS que ativa o efeito de rolagem suave na página web.*/
 }
 
 body {
@@ -16,22 +17,25 @@ body {
   line-height: 1.5;
 }
 
-img,
+img, /*video principal*/
 video {
   max-width: 100%;
   display: block;
 }
 
 a {
+  /*links gerais*/
   color: inherit;
 }
 
 .container {
+  /*container da pagina inteira*/
   width: 100%;
   overflow-x: hidden;
 }
 
 #barra-navegacao {
+  /*navbar*/
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,7 +50,7 @@ a {
   z-index: 20;
 }
 
-#logo-cafe,
+#logo-cafe,  /*carrinho, perfil e pesquisa */
 #acesso-rapido {
   display: flex;
   align-items: center;
@@ -54,15 +58,21 @@ a {
 }
 
 #logo-cafe img {
-  width: clamp(72px, 12vw, 120px);
+  /*logo do navbar */
+  width: clamp(
+    72px,
+    12vw,
+    120px
+  ); /*é uma função do CSS usada para criar larguras totalmente responsivas. */
   height: auto;
 }
 
 #nav-links {
-  flex: 1 1 360px;
+  flex: 1 1 360px; /*é uma forma simplificada (um atalho) do CSS Flexbox para definir como um item vai se comportar dentro de um container flexível.*/
 }
 
 #nav-links ul {
+  /*lista de links do navbar*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -74,16 +84,20 @@ a {
 }
 
 #nav-links li {
+  /*links individuais do navbar*/
   color: #fefefe;
   text-shadow: 1px 1px 2px black;
   font-weight: 600;
   cursor: pointer;
   padding: 0.75rem 1rem;
   border-radius: 999px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 #nav-links li:hover {
+  /*efeito dos links*/
   background-image: url(img/graos-de-cafe.png);
   background-size: 18px 18px;
   background-repeat: no-repeat;
@@ -93,18 +107,51 @@ a {
 }
 
 #nav-links li:first-child {
+  /* é um seletor CSS composto. Ele é usado para mirar e estilizar especificamente o primeiro item de uma lista que está dentro de um menu de navegação.*/
   background-color: rgba(255, 255, 255, 0.08);
 }
 
 #acesso-rapido {
-  gap: 0.35rem;
+  /*lupa, carrinho e user */
+  gap: 2.00rem;
   flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-fast-acess{
+  background-color:#593d2d;
+  border: none;
+  cursor: pointer;
+}
+
+.opcoes-acesso{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#list-acess{
+  color: #fefefe;
+  list-style: none;
+  display: none;
+  width: 120px;
+
+}
+
+.opcoes-acesso a, .opcoes-acesso li{
+  text-decoration: none;
+ font-size: 12px;
+}
+
+.opcoes-acesso a :hover{
+ color: #ba9d8a;
 }
 
 #acesso-rapido img {
+  /*logo acesso rapido */
   width: 28px;
   height: 28px;
-  cursor: pointer;
   padding: 0;
   object-fit: contain;
 }
@@ -121,12 +168,14 @@ a {
 }
 
 #principal {
+  /*main */
   width: 100%;
   max-width: 2500px;
   margin: 0 auto;
 }
 
 #Publicy {
+  /*section contendo a publicidade referencia é a imagem do casal e dos produtores */
   width: 100%;
   display: grid;
   grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.1fr);
@@ -139,22 +188,25 @@ a {
   width: 100%;
   height: 100%;
   min-height: 340px;
-  object-fit: cover;
+  object-fit: cover; /*mantem a proporção da imagem independendo a resolução */
   border-radius: 24px;
 }
 
 .informe {
+  /*titulo newlaster */
   text-align: center;
   padding: clamp(0.5rem, 2vw, 1.25rem);
 }
 
 .informe h4 {
+  /*titulo cafeteria mais tradicional */
   font-size: clamp(1.8rem, 3vw, 2.9rem);
   line-height: 1.15;
   margin: 0 0 1rem;
 }
 
 .informe p {
+  /*titulo cafeteria mais tradicional */
   width: 100%;
   max-width: 58rem;
   margin: 0 auto;
@@ -209,7 +261,8 @@ a {
   border-radius: 18px;
 }
 
-#history {
+#history-coffee {
+  /*Cafeteria Amanhecer dos Sonhos, O café com o sabor do Lar*/
   margin-top: 1rem;
   min-height: 360px;
   display: grid;
@@ -221,6 +274,7 @@ a {
 }
 
 .texto-um {
+  /*Cafeteria Amanhecer dos Sonhos, O café com o sabor do Lar*/
   font-size: clamp(1.8rem, 3vw, 3rem);
   color: #fefefe;
   text-shadow: 2px 2px 2px black;
@@ -232,17 +286,20 @@ a {
 }
 
 .texto-dois {
+  /* Nossa proposta é transmitir em cada xícara, */
   width: 100%;
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   color: #fefefe;
 }
 
 .Bold-coffe {
+  /*Faça parte da Família! */
   color: #fefefe;
   text-shadow: 2px 2px 2px black;
 }
 
 #link-sobre-nos {
+  /*Venha conhecer*/
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -262,6 +319,7 @@ a {
 }
 
 #cardapio {
+  /*section contendo todos os alimentos */
   position: relative;
   width: 100%;
   padding: 4.5rem 1.25rem 1.5rem;
@@ -273,6 +331,7 @@ a {
 }
 
 .bg-opacity {
+  /*background graos de cafe */
   position: absolute;
   inset: 0;
   background-image: url(img/Papel-de-Parede-Adesivo-Graos-de-Cafe--N010057.jpg);
@@ -318,6 +377,7 @@ a {
 }
 
 #cardapio > a::after {
+  /*camada de sombra degradê escura (gradiente) */
   content: "";
   position: absolute;
   inset: 0;
@@ -329,6 +389,7 @@ a {
 }
 
 .titulo-produto {
+  /*tituo ou enunciado de cada alimento */
   position: relative;
   z-index: 2;
   align-self: flex-end;
@@ -367,12 +428,12 @@ a {
   background-image: url(/img/sorvete.jpg);
 }
 
-#sucos{
-    background-image: url(/img/vitamina.png);
-  
+#sucos {
+  background-image: url(/img/vitamina.png);
 }
 
 #place {
+  /*ambientação*/
   background-color: #733b27;
   display: grid;
   grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
@@ -382,6 +443,7 @@ a {
 }
 
 .title-place {
+  /*titulo ambientação*/
   text-align: center;
   color: #fefefe;
   text-shadow: 2px 2px black;
@@ -391,6 +453,7 @@ a {
 }
 
 #subtitle {
+  /*subtitulo ambientação */
   font-size: 1rem;
 }
 
@@ -583,15 +646,18 @@ a {
 }
 
 @keyframes fade {
+  /*é uma regra do CSS usada para criar uma animação personalizada na sua página web.*/
   from {
+    /*from (O Início - 0% da animação): O elemento começa meio transparente, com a propriedade opacity: 0.45; (45% de visibilidade).*/
     opacity: 0.45;
   }
   to {
+    /*to (O Fim - 100% da animação): O elemento termina totalmente visível, com a propriedade opacity: 1; (100% de visibilidade).*/
     opacity: 1;
   }
 }
 
-.avaliacao {
+.avaliacao { /*feedbacks */
   position: absolute;
   left: 50%;
   bottom: 25vh;
@@ -615,7 +681,7 @@ a {
   margin: 0;
 }
 
-#History {
+#History { /*nossa história */
   background-color: #ba9d8a;
   width: 100%;
   min-height: 280px;
@@ -646,7 +712,7 @@ a {
   padding: 0 0 1rem;
 }
 
-#historia {
+#historia { /*button enviar dados */
   background-color: #26140e;
   color: #f2f2f2;
   font-size: 1rem;
@@ -660,7 +726,7 @@ a {
   width: 100%;
 }
 
-.container-newlaster {
+.container-newlaster { 
   background-color: #927869;
   display: flex;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -712,7 +778,7 @@ a {
   margin: 0;
 }
 
-.dados {
+.dados { /*whatsapp*/
   padding: 0;
   display: grid;
   gap: 0.35rem;

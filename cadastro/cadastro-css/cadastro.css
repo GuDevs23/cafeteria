@@ -1,0 +1,157 @@
+*,
+*::before, /*pseudo-elemento no CSS que permite inserir conteúdo visual na página antes do conteúdo real de um elemento HTML*/
+*::after {
+  /*pseudo-elemento no CSS que permite inserir conteúdo visual na página depois do conteúdo real de um elemento HTML*/
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /*é uma propriedade do CSS que ativa o efeito de rolagem suave na página web.*/
+}
+
+body {
+  margin: 0;
+  background-color: #fefefe;
+  color: #26140e;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+img, /*video principal*/
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  /*links gerais*/
+  color: inherit;
+}
+
+.container {
+  /*container da pagina inteira*/
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#barra-navegacao {
+  /*navbar*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  min-height: 96px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #593d2d;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+#logo-cafe,  /*carrinho, perfil e pesquisa */
+#acesso-rapido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo-cafe img {
+  /*logo do navbar */
+  width: clamp(
+    72px,
+    12vw,
+    120px
+  ); /*é uma função do CSS usada para criar larguras totalmente responsivas. */
+  height: auto;
+}
+
+#nav-links {
+  flex: 1 1 360px; /*é uma forma simplificada (um atalho) do CSS Flexbox para definir como um item vai se comportar dentro de um container flexível.*/
+}
+
+#nav-links ul {
+  /*lista de links do navbar*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-links li {
+  /*links individuais do navbar*/
+  color: #fefefe;
+  text-shadow: 1px 1px 2px black;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#nav-links li:hover {
+  /*efeito dos links*/
+  background-image: url(img/graos-de-cafe.png);
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: left 0.6rem center;
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+#nav-links li:first-child {
+  /* é um seletor CSS composto. Ele é usado para mirar e estilizar especificamente o primeiro item de uma lista que está dentro de um menu de navegação.*/
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+#acesso-rapido {
+  /*lupa, carrinho e user */
+  gap: 2.00rem;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-fast-acess{
+  background-color:#593d2d;
+  border: none;
+  cursor: pointer;
+}
+
+.opcoes-acesso{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#list-acess{
+  color: #fefefe;
+  list-style: none;
+  display: none;
+  width: 120px;
+
+}
+
+.opcoes-acesso a, .opcoes-acesso li{
+  text-decoration: none;
+ font-size: 12px;
+}
+
+.opcoes-acesso a :hover{
+ color: #ba9d8a;
+}
+
+#acesso-rapido img {
+  /*logo acesso rapido */
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  object-fit: contain;
+}

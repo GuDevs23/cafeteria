@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <!--navegação (parte superior)-->
-      <header id="barra-navegacao">
+      <header id="barra-navegacao" ondblclick="fechaAbas()" >
         <figure id="logo-cafe">
           <img src="img/logo-cafe.png" alt="logo café" />
         </figure>
@@ -33,12 +33,20 @@
         <!--icones de acesso rápido-->
         <div class="fast-acess">
           <figure id="acesso-rapido">
-            <img src="img/lupa.png" alt="Pesquisar" />
-            <img src="img/user.png" alt="login" />
-            <img src="img/carrinhos.png" alt="meu carrinho" />
+            <button class="btn-fast-acess" id="pesquisar"><img src="img/lupa.png" alt="Pesquisar" /></button>
+             <div class="opcoes-acesso">
+            <button class="btn-fast-acess" id="login-acesso" onclick="opcoesAcesso()" ondblclick="fechaAcesso()" ><img src="img/user.png" alt="login" /></button>
+              <ul id="list-acess">
+                <a href="/login/login.html"><li>Login</li></a>
+                <a href="cadastro/cadastro.html"><li>Cadastro</li></a>
+                <a href="#"><li>Alterar dados</li></a>
+              </ul>
+            </div>
+            <button class="btn-fast-acess" id="compras"><img src="img/carrinhos.png" alt="meu carrinho" /></button>
           </figure>
         </div>
       </header>
+
       <!--video-->
       <section id="video">
         <video
@@ -110,7 +118,7 @@
           </div>
         </section>
         <!--faça parte da familia-->
-        <section id="history">
+        <section id="history-coffee">
           <div class="texto-um">
             <h3>Cafeteria Amanhecer dos Sonhos, O café com o sabor do Lar.</h3>
           </div>
