@@ -1,1 +1,127 @@
-<h1>Pagina em construção, volte depos (:</h1>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafeteria Amanhecer dos sonhos</title>
+    <link rel="stylesheet" href="/login/login css/login.css" />
+    <script src="/login/script-login/login.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="../img/graos-de-cafe.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!--navegação (parte superior)-->
+      <header id="barra-navegacao" ondblclick="fechaAbas()">
+        <figure id="logo-cafe">
+          <img src="../img/logo-cafe.png" alt="logo café" />
+        </figure>
+        <!--Links -->
+        <nav id="nav-links">
+          <ul>
+            <a href="/index.html"><li>Home</li></a>
+            <!--utilizar javascript nas linhas que vão funcionar como abas-->
+            <li>Sobre nós</li>
+            <li>Nossa estrutura</li>
+            <li>Contato</li>
+          </ul>
+        </nav>
+        <!--icones de acesso rápido-->
+        <div class="fast-acess">
+          <figure id="acesso-rapido">
+            <button class="btn-fast-acess" id="pesquisar">
+              <img src="../img/lupa.png" alt="Pesquisar" />
+            </button>
+            <div class="opcoes-acesso">
+              <button
+                class="btn-fast-acess"
+                id="login-acesso"
+                onclick="opcoesAcesso()"
+                ondblclick="fechaAcesso()"
+              >
+                <img src="../img/user.png" alt="login" />
+              </button>
+              <ul id="list-acess">
+                <a href="../login/login.html"><li>Login</li></a>
+                <a href="cadastro.html"><li>Cadastro</li></a>
+                <a href="#"><li>Alterar dados</li></a>
+              </ul>
+            </div>
+            <button class="btn-fast-acess" id="compras">
+              <img src="../img/carrinhos.png" alt="meu carrinho" />
+            </button>
+          </figure>
+        </div>
+      </header>
+      <main>
+        <div class="container-principal">
+          <section id="logon">
+            <div class="container-login">
+              <h2>Preencha seus dados para cadastro no sistema de pedidos</h2>
+              <form action="#" id="Dados-login">
+                <h2>Digite seus dados cadastrados:</h2>
+                <div class="dados">
+                    <label for="nome"><span>Digite seu Nome:</span></label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+                </div>
+                <div class="dados">
+                    <label for="Cpf"> <span>Digite seu CPF:</span></label>
+                    <input type="number" name="doc" id="doc" placeholder="Digite seu CPF">
+                </div>
+                <div class="dados">
+                  <label for="ctt"><span>E-mail:</span></label>
+                  <input type="email" id="ctt" placeholder="Digite seu e-mail"/>
+                </div>
+                <div class="dados">
+                  <label for="senha"><span>Digite sua Senha:</span></label>
+                  <input
+                    type="password"
+                    id="pass"
+                    placeholder="Digite sua senha"
+                  />
+                </div>
+                <div class="dados">
+                    <label for="repeat"><span>Repita sua senha:</label>
+                    <input type="password" name="repeat" id="repeat" placeholder="Repita a senha digitada:">
+                </div>                <button type="submit" id="enviar" onclick="processaDados()">
+                  Enviar informações
+                </button>
+                <a href="#">Esqueci a senha</a>
+              </form>
+              <div id="agradecimentos">
+                <h1>Obrigado pelo envio!</h1>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+        <footer>
+        <div class="footer-container">
+          <img src="../img/logo-cafe.png" alt="logo-cafeteria" id="logo-footer">
+          <div class="link-footer">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Conheça</a></li>
+              <li><a href="#">Nossos sabores</a></li>
+              <li><a href="#">Carápio</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+          <div class="social-media">
+            <a href="#"><img src="../img/instagram-white.png" alt="Intagram" id="instagram"></a>
+            <a href="#"><img src="../img/facebook-white.png" alt="Facebook"></a>
+            <a href="#"><img src="../img/whatsapp-white.png" alt="Whatsapp"></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!---site referencia https://umcoffeeco.com.br/?srsltid=AfmBOooLcNNK1W8bvbT4face18NhAa9LVLiOfwlgk-CCTpof9iyEAFke-->
+<!--site 2 referencia https://www.darkcoffeebr.com/-->
+<!--https://www.vanillacaffe.com.br/-->
+<!--https://wecoffee.com.br/-->
